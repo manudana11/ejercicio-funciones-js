@@ -217,7 +217,7 @@ function checkPassword() {
             console.log('Contraseña correcta!');
             alert('Enhorabuena')
         } else {
-            alert('contraseña')
+            alert('contraseña incorrecta')
         }
     }
 }
