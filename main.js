@@ -210,10 +210,10 @@ multiplicarArray([2, 3, 4]);
 
 function checkPassword() {
     const password1 = 'hola1';
-    for (let intentos = 0; intentos < 3; intentos++) {
+    for (let i = 0; i < 3; i++) {
         let password2 = prompt('Introduce la contraseña');
         if (password1 === password2) {
-            intentos = 3;
+            i = 3;
             console.log('Contraseña correcta!');
             alert('Enhorabuena')
         } else {
