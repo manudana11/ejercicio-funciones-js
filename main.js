@@ -1,4 +1,4 @@
-function resta (a, b) {
+function resta(a, b) {
     return a - b;
 }
 
@@ -77,7 +77,7 @@ function ultimoCaracter(palabrota) {
     }
 }
 
-console.log(ultimoCaracter(''));
+console.log(ultimoCaracter('Hola'));
 
 function cuentaCaracteres(miPalabra) {
     switch (typeof miPalabra === 'string') {
@@ -125,3 +125,101 @@ function division(a, b) {
 }
 
 console.log(division(20, 5));
+
+let arrNumeros = [];
+function mayorQue4(numeros) {
+    if (Array.isArray(numeros)) {
+        for (let i = 0; i < numeros.length; i++) {
+            if (numeros[i] >= 5) {
+                arrNumeros.push(numeros[i]);
+            }
+        }
+    }
+}
+
+mayorQue4([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+
+console.log(arrNumeros);
+
+/* function numeroPrimo() {
+    let primos = prompt('Introduzca un numero');
+    primos = +primos;
+    for (let i = 2; i <= Math.sqrt(primos); i++) {
+        if (primos % i === 0) {
+            console.log(false);
+            break;
+        } else {
+            console.log(true);
+            break;
+        }
+    }
+}
+
+numeroPrimo(); */
+
+// Extra
+
+// Crear la función obtenerImpares que acepte como argumento un array de números y devuelva un array con los elementos impares.
+
+let numeroImpares = [];
+function obtenerImpares(impares) {
+    if (Array.isArray(impares)) {
+        for (let i = 0; i < impares.length; i++) {
+            if (impares[i] % 2 !== 0) {
+                numeroImpares.push(impares[i]);
+            }
+        }
+    }
+}
+
+obtenerImpares([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+console.log(numeroImpares);
+
+// Crear la función sumarArray que acepte como argumento un array numérico y devuelva la suma de los números en el array Array: [1, 2, 3] resultado: 6.
+
+function sumarArray(sumita) {
+    let acumuladorSumita = 0;
+    if (Array.isArray(sumita)) {
+        for (let i = 0; i < sumita.length; i++) {
+            acumuladorSumita += sumita[i];
+            
+        }
+    console.log(acumuladorSumita);
+    }
+}
+
+sumarArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 5]);
+
+// Crear la función multiplicarArray que acepte como argumento un array numérico y devuelva la multiplicación de los números en el array Array: [2, 3, 4] resultado: 2
+
+function multiplicarArray(multiplicar) {
+    let acumuladormultiplicar = 1;
+    if (Array.isArray(multiplicar)) {
+        for (let i = 0; i < multiplicar.length; i++) {
+            acumuladormultiplicar *= multiplicar[i];
+            
+        }
+    console.log(acumuladormultiplicar);
+    }
+}
+
+multiplicarArray([2, 3, 4]);
+
+// Crea una función checkPassword con una variable tipo string que contenga una contraseña cualquiera. Después, se te pedirá que introduzcas la contraseña (usando prompt), con 3 intentos. Cuando aciertes, ya no pedirá más la contraseña y mostrará un mensaje diciendo “Enhorabuena” (ej. un alert). Piensa bien en la condición de salida (3 intentos y, si acierta, sale aunque le queden intentos).
+
+function checkPassword() {
+    const password1 = 'hola1';
+    for (let intentos = 0; intentos < 3; intentos++) {
+        let password2 = prompt('Introduce la contraseña');
+        if (password1 === password2) {
+            intentos = 3;
+            console.log('Contraseña correcta!');
+            alert('Enhorabuena')
+        } else {
+            alert('contraseña')
+        }
+    }
+}
+
+checkPassword();
